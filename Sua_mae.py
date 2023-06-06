@@ -403,6 +403,59 @@ dados = [
 	["Wenceslau Braz",267,1054,1488,1807,1682,1478,1451,1392,1265,1352,1302,1188,1009,780,600,495,312,376],
 	["Xambrê",62,282,452,456,471,466,417,380,400,450,436,340,331,297,275,198,150,149]
 ]
-def DesvioPadrao (lista):
-    
-    
+def bubble(L):
+	N = len(L)
+	troca = False
+	for i in range(N):
+		for j in range(N-i-1):
+			if L[j] > L[j+1]:
+				troca = True
+			L[j], L[j+1] = L[j+1], L[j]
+		if not troca:
+			return
+
+def Ordem(lista):
+#definindo as listas que vamos usar para organizar a faixa etaria:
+	#servirá para ser um conjunto que virará uma linha de uma matriz
+	listas = []
+	#matriz:
+	listas2 = []
+	for i in range(len(lista) ):
+		listas.append(lista[i][0])
+		listas.append(lista [i][10] + lista [i][11] +lista [i][12] +lista [i][13])   
+		listas2.append(listas)
+		listas = []
+	troca = False
+	N = len(listas2)
+	for i in range(N):
+		for j in range(N-i-1):
+			if listas2[j][1] > listas2[j+1][1]:
+				troca = True
+				listas2[j], listas2[j+1] = listas2[j+1], listas2[j]
+		if not troca:
+			return
+	
+	print (listas2)
+def DesvioPad(lista)
+	#definindo as listas que vamos usar para organizar a faixa etaria:
+	#servirá para ser um conjunto que virará uma linha de uma matriz
+	listas = []
+	#matriz:
+	listas2 = []
+	soma = 0.0
+	desv = 0.0
+	tam = len(lista)
+	for i in range(tam):
+		listas.append(lista[i][0])
+		listas.append(lista [i][6] + lista [i][7] +lista [i][8])   
+		listas2.append(listas)
+		listas = []
+		
+	
+print (Ordem(dados))
+
+	
+
+
+        
+
