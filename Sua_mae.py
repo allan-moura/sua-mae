@@ -436,13 +436,14 @@ def Ordem(lista):
 			return
 	
 	print (listas2)
-def DesvioPad(lista)
+def DesvioPad(lista):
 	#definindo as listas que vamos usar para organizar a faixa etaria:
 	#servirá para ser um conjunto que virará uma linha de uma matriz
 	listas = []
 	#matriz:
 	listas2 = []
-	soma = 0.0
+	med = 0.0
+	soma_m = 0.0
 	desv = 0.0
 	tam = len(lista)
 	for i in range(tam):
@@ -450,9 +451,16 @@ def DesvioPad(lista)
 		listas.append(lista [i][6] + lista [i][7] +lista [i][8])   
 		listas2.append(listas)
 		listas = []
-		
-	
-print (Ordem(dados))
+	for i in range(1,tam):
+		soma_m += listas2[i][1]
+	med = soma_m / (tam - 1)
+	for i in range(1,tam):
+		soma = (listas2[i][1] - med)**2
+	desv = (soma / (tam - 1))**(1/2)
+	print(desv)
+
+print(DesvioPad(dados))
+
 
 	
 
